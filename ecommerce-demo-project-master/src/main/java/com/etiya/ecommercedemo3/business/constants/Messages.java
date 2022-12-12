@@ -75,6 +75,8 @@ public class Messages {
         public static final String individualCustomerGetByFirstNameSuccessMessage = "Bireysel Müşteri Adına Göre Getirildi";
         public static final String individualCustomerGetByIdentityNumberSuccessMessage = "Bireysel Müşterilerin TC Kimlik no'suna göre getirildi.";
     }
-
+public static class Order{
+     public  static  final  String orderAddSuccessMessage="Sipariş eklendi";
+}
 
 }

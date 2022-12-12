@@ -45,6 +45,7 @@ public class ProductCategoryManager implements ProductCategoryService {
     private void checkIfCategoryExists(int id){
         boolean isExists = categoryRepository.existsById(id);
         if(!isExists) {
+            //business exception
             throw new BusinessException(Messages.ProductCategory.ProductCategoryNotExistWithId);
         }
     }

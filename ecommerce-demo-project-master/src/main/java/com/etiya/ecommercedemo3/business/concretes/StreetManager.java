@@ -50,6 +50,7 @@ private CityRepository cityRepository;
     private void checkIfCityExists(int id){
         boolean isExists = cityRepository.existsById(id);
         if(!isExists) {
+            //business exception
             throw new BusinessException(Messages.City.CityNotExistWithId);
         }
     }

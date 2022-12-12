@@ -43,6 +43,7 @@ private CountryRepository countryRepository;
     private void checkIfCountryExists(int id){
         boolean isExists = countryRepository.existsById(id);
         if(!isExists) {
+            //business exception
             throw new BusinessException(Messages.Country.CountryNotExistWithId);
         }
     }

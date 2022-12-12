@@ -82,6 +82,7 @@ public class AddressManager implements AddressService {
     private void checkIfStreetExists(int id){
         boolean isExists = streetRepository.existsById(id);
         if(!isExists) {
+            //business exception
             throw new BusinessException(Messages.Street.StreetNotExistWithId);
         }
     }
@@ -89,6 +90,7 @@ public class AddressManager implements AddressService {
     private void checkIfCustomerExists(int id){
         boolean isExists = customerRepository.existsById(id);
         if(!isExists) {
+            //business exception
             throw new BusinessException(Messages.Customer.CustomerNotExistWithId);
         }
     }

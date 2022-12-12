@@ -55,6 +55,7 @@ public class CategoryManager implements CategoryService {
         // Exception fırlatma
         boolean isExists = categoryRepository.existsCategoryByName(name);
         if(isExists)
+            //business exception
             throw new BusinessException(Messages.Category.CategoryExistWithSameName);
     }
 

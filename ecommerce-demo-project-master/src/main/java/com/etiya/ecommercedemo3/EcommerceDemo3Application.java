@@ -33,11 +33,12 @@ public class EcommerceDemo3Application {
 		return new ModelMapper();
 	}
 
+
 	@ExceptionHandler
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	public ErrorDataResult<Object> handleValidationException(MethodArgumentNotValidException exception)
 	{
-
+		//Validation exception handle edildi.
 		//TODA:ErrorDataResult olarak hataları döndür.
 		Map<String,String> errors=new HashMap<>();
 		//ErrorDataResult<String> hata=new ErrorDataResult<String>();
@@ -51,6 +52,7 @@ public class EcommerceDemo3Application {
 	}
 	@ExceptionHandler
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	//BusinessException Handle edildi
 
 	public  ErrorDataResult<Object> handleBusinessException(BusinessException businessException)
 	{
